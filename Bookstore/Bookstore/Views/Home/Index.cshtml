@@ -15,19 +15,28 @@
 
 @foreach (Book b in Model.Books)
 {
-    <h3>@b.Title</h3>
+    <div class="card card-outline-primary m-1 p-1">
+        <div class="bg-faded p-1">
+            
+            <p>
 
-    <ul>
-        <li>Author: @b.Author</li>
-        <li>Publisher: @b.Publisher</li>
-        <li>ISBN: @b.Isbn</li>
-        <li>Classification: @b.Classification</li>
-        <li>Category: @b.Category</li>
-        <li>Number of Pages: @b.PageCount</li>
-        <li>Price: @b.Price</li>
-    </ul>
-
-    <br />
+                <ul>
+                    <li class="list-unstyled"><h4 class="bookTitle">@b.Title</h4></li>
+                    <li class="list-unstyled"><b>Author:</b> @b.Author</li>
+                    <li class="list-unstyled"><b>Publisher:</b> @b.Publisher</li>
+                    <li class="list-unstyled"><b>ISBN:</b> @b.Isbn</li>
+                    <li class="list-unstyled"><b>Classification:</b> @b.Classification</li>
+                    <li class="list-unstyled"><b>Category:</b> @b.Category</li>
+                    <li class="list-unstyled"><b>Number of Pages:</b> @b.PageCount</li>
+                    <li class="list-unstyled"><b>Price:</b> $@b.Price</li>
+                </ul>
+            </p>
+            <br />
+        </div>
+    </div>
 }
 
-<div page-model="@Model.BookInfo" page-action="Index"></div>
+<div page-model="@Model.BookInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>
