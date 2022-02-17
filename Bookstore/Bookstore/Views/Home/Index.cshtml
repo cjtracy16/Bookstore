@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Bookmark It";
+}
+
+@model BooksViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Bookmark It</h1>
+
+</div>
+
+@{
+
+}
+
+@foreach (Book b in Model.Books)
+{
+    <h3>@b.Title</h3>
+
+    <ul>
+        <li>Author: @b.Author</li>
+        <li>Publisher: @b.Publisher</li>
+        <li>ISBN: @b.Isbn</li>
+        <li>Classification: @b.Classification</li>
+        <li>Category: @b.Category</li>
+        <li>Number of Pages: @b.PageCount</li>
+        <li>Price: @b.Price</li>
+    </ul>
+
+    <br />
+}
+
+<div page-model="@Model.BookInfo" page-action="Index"></div>
