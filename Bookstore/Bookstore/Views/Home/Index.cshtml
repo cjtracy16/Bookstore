@@ -4,38 +4,18 @@
 
 @model BooksViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Bookmark It</h1>
+<div class="text-left">
+    <h3 class="display-4">Books</h3>
 
 </div>
 
-@{
-
-}
-
 @foreach (Book b in Model.Books)
 {
-    <div class="card card-outline-primary m-1 p-1">
-        <div class="bg-faded p-1">
-            
-            <p>
-
-                <ul>
-                    <li class="list-unstyled"><h4 class="bookTitle">@b.Title</h4></li>
-                    <li class="list-unstyled"><b>Author:</b> @b.Author</li>
-                    <li class="list-unstyled"><b>Publisher:</b> @b.Publisher</li>
-                    <li class="list-unstyled"><b>ISBN:</b> @b.Isbn</li>
-                    <li class="list-unstyled"><b>Classification:</b> @b.Classification</li>
-                    <li class="list-unstyled"><b>Category:</b> @b.Category</li>
-                    <li class="list-unstyled"><b>Number of Pages:</b> @b.PageCount</li>
-                    <li class="list-unstyled"><b>Price:</b> $@b.Price</li>
-                </ul>
-            </p>
-            <br />
-        </div>
-    </div>
+    //Go to BookSummary to pull in the Books in database
+    <partial name="BookSummary" model="b"/>
 }
 
+@*Create buttons at the bottom of the page. Highlight the button selected*@
 <div page-model="@Model.BookInfo" page-action="Index" page-classes-enabled="true"
      page-class="btn" page-class-normal="btn-outline-dark"
      page-class-selected="btn-primary" class="btn-group pull-right m-1">

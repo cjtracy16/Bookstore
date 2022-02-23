@@ -1,15 +1,24 @@
 ﻿@{
 }
-
 @model Book
-<div class="card card-outline-primary m-1 p-1">
-    <div class="bg-faded p-1">
-        <h4>
-            @Model.Title
-            <span class="badge badge-pill badge-primary" style="float:right">
-                <small>@Model.Price</small>
-            </span>
-        </h4>
+
+<div class="card card-outline-primary m-2 p-1">
+
+    @* List out the information for each book *@
+    <div class="bg-light p-1">
+        <h4 class="bookTitle">@Model.Title</h4>
+
+        <span class="badge btn-info" style="float:right">
+            Price: $@Model.Price
+        </span>
     </div>
-    <div class="card-text p-1">@Model.Author</div>
+
+    <ul>
+        <li class="list-unstyled"><b>Author:</b> @Model.Author</li>
+        <li class="list-unstyled"><b>Publisher:</b> @Model.Publisher</li>
+        <li class="list-unstyled"><b>ISBN:</b> @Model.Isbn</li>
+        <li class="list-unstyled"><b>Classification:</b> @Model.Classification</li>
+        <li class="list-unstyled"><b>Category:</b> @Model.Category</li>
+        <li class="list-unstyled"><b>Number of Pages:</b> @Model.PageCount</li>
+    </ul>
 </div>

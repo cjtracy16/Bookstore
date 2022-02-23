@@ -76,3 +76,4 @@ C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netco
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Bookstore.genruntimeconfig.cache
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\BookSummary.cshtml.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Categories\Default.cshtml.g.cs
