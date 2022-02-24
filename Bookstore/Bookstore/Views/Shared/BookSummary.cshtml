@@ -21,4 +21,12 @@
         <li class="list-unstyled"><b>Category:</b> @Model.Category</li>
         <li class="list-unstyled"><b>Number of Pages:</b> @Model.PageCount</li>
     </ul>
+    <form method="post" asp-page="/Purchase">
+
+        <input type="hidden" asp-for="@Model.BookId" />
+        <span class="card-text">
+            <button type="submit" class="m-3 btn btn-success btn-sm float-end">Purchase</button>
+        </span>
+
+    </form>
 </div>

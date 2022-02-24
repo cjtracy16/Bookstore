@@ -1,3 +1,12 @@
 ﻿.bookTitle {
     padding-left: 25px;
 }
+
+.myBtn {
+    margin: 3px;
+}
+
+.btn-category{
+    margin-bottom: 15px;
+    min-width: 145px;
+}
