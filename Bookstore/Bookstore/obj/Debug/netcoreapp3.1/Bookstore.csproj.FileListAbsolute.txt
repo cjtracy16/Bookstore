@@ -1,4 +1,3 @@
-C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Bookstore.csproj.AssemblyReference.cache
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Bookstore.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Bookstore.AssemblyInfoInputs.cache
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Bookstore.AssemblyInfo.cs

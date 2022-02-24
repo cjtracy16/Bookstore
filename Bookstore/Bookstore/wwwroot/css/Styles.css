@@ -9,4 +9,5 @@
 .btn-category{
     margin-bottom: 15px;
     min-width: 145px;
+    max-width: auto;
 }

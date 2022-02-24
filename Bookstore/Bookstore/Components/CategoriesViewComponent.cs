@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Bookstore.Models;
 
-namespace WaterProject.Components
+namespace Bookstore.Components
 {
     public class CategoriesViewComponent : ViewComponent
     {

@@ -19,7 +19,7 @@ namespace Bookstore.Pages
             repo = temp;
         }
 
-        public Cart cart { get; set; }
+        public Cart Cart { get; set; }
         public string ReturnUrl { get; set; }
 
         //Pass the returnUrl to the Cart page so that a user can continue shopping
@@ -28,18 +28,18 @@ namespace Bookstore.Pages
             //if there is not returnURL send them to the home page
             ReturnUrl = returnUrl ?? "/";
             //pass in the session data
-            cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            Cart = HttpContext.Session.GetJson<Cart>("Cart") ?? new Cart();
         }
 
         public IActionResult OnPost(int bookId, string returnUrl)
         {
             Book b = repo.Books.FirstOrDefault(x => x.BookId == bookId);
             //pass in the session data
-            cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            Cart = HttpContext.Session.GetJson<Cart>("Cart") ?? new Cart();
             //Add the specific book to the cart and pass it's data
-            cart.AddItem(b, 1);
+            Cart.AddItem(b, 1);
 
-            HttpContext.Session.SetJson("cart", cart);
+            HttpContext.Session.SetJson("Cart", Cart);
             //using the returnUrl to return to previous page
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }

@@ -19,7 +19,7 @@
 
     <tbody>
         @* For all the books in the cart print of the Book title, quantity, price, and subtotal *@
-        @foreach (var i in Model.cart.Items)
+        @foreach (var i in Model.Cart.Items)
         {
             <tr>
                 <td>@i.Book.Title</td>
@@ -34,7 +34,7 @@
     <tfoot>
         <tr>
             <td colspan="3">Total:</td>
-            <td>@Model.cart.CalculateTotal().ToString("c")</td>
+            <td>@Model.Cart.CalculateTotal().ToString("c")</td>
         </tr>
     </tfoot>
 </table>

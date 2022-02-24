@@ -8,7 +8,7 @@
     <div class="bg-light p-1">
         <h4 class="bookTitle">@Model.Title</h4>
 
-        <span class="badge btn-info" style="float:right">
+        <span class="badge btn-success p-2 m-3" style="float:right">
             Price: $@Model.Price
         </span>
     </div>
@@ -27,7 +27,7 @@
         <input type="hidden" asp-for="@Model.BookId" />
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
         <span class="card-text">
-            <button type="submit" class="m-3 btn btn-success btn-sm float-end">Purchase</button>
+            <button type="submit" class="m-3 btn btn-success btn-sm float-end" style="float:right">Purchase</button>
         </span>
 
     </form>
