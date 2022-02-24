@@ -22,21 +22,25 @@ namespace Bookstore.Pages
         public Cart cart { get; set; }
         public string ReturnUrl { get; set; }
 
+        //Pass the returnUrl to the Cart page so that a user can continue shopping
         public void OnGet(string returnUrl)
         {
+            //if there is not returnURL send them to the home page
             ReturnUrl = returnUrl ?? "/";
+            //pass in the session data
             cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
         }
 
         public IActionResult OnPost(int bookId, string returnUrl)
         {
             Book b = repo.Books.FirstOrDefault(x => x.BookId == bookId);
-
+            //pass in the session data
             cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            //Add the specific book to the cart and pass it's data
             cart.AddItem(b, 1);
 
             HttpContext.Session.SetJson("cart", cart);
-
+            //using the returnUrl to return to previous page
             return RedirectToPage(new { ReturnUrl = returnUrl });
         }
     }

@@ -23,6 +23,7 @@
     </ul>
     <form method="post" asp-page="/Purchase">
 
+        @* Two hidden fields ID so that the specific book info can be added to the cart and the returnURL so once a user returns to the main site they will return to the specific page they are on. *@
         <input type="hidden" asp-for="@Model.BookId" />
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
         <span class="card-text">

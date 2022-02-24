@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
+//Context file for Bookstore site
 namespace Bookstore.Models
 {
     public class BookstoreContext : DbContext

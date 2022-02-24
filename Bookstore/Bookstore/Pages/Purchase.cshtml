@@ -5,6 +5,7 @@
 
 <h2>Your Cart</h2>
 
+@* Create a table with the cart information *@
 <table class="table table-bordered table-striped">
 
     <thead>
@@ -17,6 +18,7 @@
     </thead>
 
     <tbody>
+        @* For all the books in the cart print of the Book title, quantity, price, and subtotal *@
         @foreach (var i in Model.cart.Items)
         {
             <tr>
@@ -28,6 +30,7 @@
         }
     </tbody>
 
+    @* Call the function created in Cart.cs that calculates total for the books in the cart *@
     <tfoot>
         <tr>
             <td colspan="3">Total:</td>
@@ -36,6 +39,7 @@
     </tfoot>
 </table>
 
+@* Continue shopping button - using a ReturnUrl Passed during GET() *@
 <div>
     <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
 </div>

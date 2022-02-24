@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+//Create own TagHelpers
 namespace Bookstore.Infrastructure
 {
     [HtmlTargetElement("div", Attributes = "page-model")]
@@ -21,6 +22,8 @@ namespace Bookstore.Infrastructure
             uhf = temp;
         }
 
+
+        //Create getters and setters for new tag helpers
         [ViewContext]
         [HtmlAttributeNotBound]
         public ViewContext vc { get; set; }
@@ -32,6 +35,7 @@ namespace Bookstore.Infrastructure
         public string PageClassNormal { get; set; }
         public string PageClassSelected { get; set; }
 
+        //Create Dynamic Buttons at bottom of page using tag helpers
         public override void Process(TagHelperContext thc, TagHelperOutput tho)
         {
             IUrlHelper uh = uhf.GetUrlHelper(vc);

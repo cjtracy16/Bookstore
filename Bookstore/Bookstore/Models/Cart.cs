@@ -10,24 +10,27 @@ namespace Bookstore.Models
 
         public void AddItem(Book book, int qty)
         {
+            //Get the specific book selected based off bookID
             CartLineItem line = Items
                 .Where(b => b.Book.BookId == book.BookId)
                 .FirstOrDefault();
 
+            //if the Book isn't in cart (is null) then create a new line item
             if (line == null)
             {
                 Items.Add(new CartLineItem
                 {
                     Book = book,
                     Quantity = qty
-
                 });
             }
+            //Otherwise increase the qty for that Book
             else
             {
                 line.Quantity += qty;
             }
         }
+        //Function to create the subtotal for all items in the cart
         public double CalculateTotal()
         {
             double sum = Items.Sum(x => x.Quantity * x.Book.Price);
@@ -36,6 +39,7 @@ namespace Bookstore.Models
         }
     }
 
+    //Create Instance of a line item - creates variables
     public class CartLineItem
     {
         public int LineID { get; set; }
