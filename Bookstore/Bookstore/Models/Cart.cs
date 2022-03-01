@@ -8,7 +8,7 @@ namespace Bookstore.Models
     {
         public List<CartLineItem> Items { get; set; } = new List<CartLineItem>(); // Declaration & Instantiation
 
-        public void AddItem(Book book, int qty)
+        public virtual void AddItem(Book book, int qty)
         {
             //Get the specific book selected based off bookID
             CartLineItem line = Items
@@ -30,6 +30,19 @@ namespace Bookstore.Models
                 line.Quantity += qty;
             }
         }
+
+        //This allows user to remove a book from their cart
+        public virtual void RemoveItem(Book book)
+        {
+            Items.RemoveAll(x => x.Book.BookId == book.BookId);
+        }
+
+        //Allows user to empty they entire cart
+        public virtual void ClearCart()
+        {
+            Items.Clear();
+        }
+
         //Function to create the subtotal for all items in the cart
         public double CalculateTotal()
         {

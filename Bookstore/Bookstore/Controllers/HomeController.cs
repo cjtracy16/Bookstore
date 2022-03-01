@@ -28,7 +28,7 @@ namespace Bookstore.Controllers
             var x = new BooksViewModel
             {
                 Books = repo.Books
-                .Where(p => p.Category == bookCategory || bookCategory == null) //Helps sort by category when selected by user
+                .Where(b => b.Category == bookCategory || bookCategory == null) //Helps sort by category when selected by user
                 .OrderBy(b => b.Title) // Orders all displayed Books in alphabetical order
                 .Skip((pageNum - 1) * pageSize)
                 .Take(pageSize),
