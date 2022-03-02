@@ -6,14 +6,17 @@
 
     @* List out the information for each book *@
     <div class="bg-light p-1">
-        <h4 class="bookTitle">@Model.Title</h4>
+        <div class="row">
+            <h4 class="col bookTitle">@Model.Title</h4>
+            <div class=" col-6 text-right p-2 m-3 price" style="float:right">
+                Price: $@Model.Price
+            </div>
+        </div>
 
-        <span class="badge btn-success p-2 m-3" style="float:right">
-            Price: $@Model.Price
-        </span>
+        
     </div>
 
-    <ul>
+    <ul class="bookInfoList pt-2">
         <li class="list-unstyled"><b>Author:</b> @Model.Author</li>
         <li class="list-unstyled"><b>Publisher:</b> @Model.Publisher</li>
         <li class="list-unstyled"><b>ISBN:</b> @Model.Isbn</li>
