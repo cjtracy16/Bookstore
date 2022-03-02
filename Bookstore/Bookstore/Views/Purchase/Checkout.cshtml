@@ -7,7 +7,9 @@
 
 <p>Please enter your information below:</p>
 
-<form method="post">
+<form method="post" asp-controller="Purchase" asp-action="Checkout">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
 
     <h4>Ship To</h4>
     <div class="form-group">
@@ -47,7 +49,7 @@
 
 
     <div class="float-end">
-        <input class="btn btn-primary" type="submit" value="Purchase" />
+        <input class="btn btn-primary" type="submit" value="Purchase" asp-controller="Purchase"/>
     </div>
 
 </form>

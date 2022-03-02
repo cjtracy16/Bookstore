@@ -1,4 +1,12 @@
-﻿.bookTitle {
+﻿.cartInfo {
+    padding-right: 5px;
+}
+
+.bookInfoList {
+    margin-top: 5px;
+}
+
+.bookTitle {
     padding-left: 25px;
 }
 
@@ -10,4 +18,8 @@
     margin-bottom: 15px;
     min-width: 145px;
     max-width: auto;
+}
+
+.price{
+    font-size:medium;
 }
