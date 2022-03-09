@@ -84,3 +84,17 @@ C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netco
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Views\Purchase\Checkout.cshtml.g.cs
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\PurchaseConfirmation.cshtml.g.cs
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CartSummary\Default.cshtml.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Bookstore.RazorComponent.input.cache
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\AdminLayout.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Books.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Purchases.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Routed.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\_Imports.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Bookstore.RazorComponent.output.cache
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\RazorDeclaration\Bookstore.dll
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\AdminLayout.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Books.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Purchases.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Routed.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\_Imports.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Index.cshtml.g.cs
