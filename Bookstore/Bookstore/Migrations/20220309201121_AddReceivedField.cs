@@ -2,23 +2,22 @@
 
 namespace Bookstore.Migrations
 {
-    public partial class noAnonymous : Migration
+    public partial class AddReceivedField : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "Anonymous",
-                table: "Purchases");
+            migrationBuilder.AddColumn<bool>(
+                name: "PurchaseReceived",
+                table: "Purchases",
+                nullable: false,
+                defaultValue: false);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<bool>(
-                name: "Anonymous",
-                table: "Purchases",
-                type: "INTEGER",
-                nullable: false,
-                defaultValue: false);
+            migrationBuilder.DropColumn(
+                name: "PurchaseReceived",
+                table: "Purchases");
         }
     }
 }
