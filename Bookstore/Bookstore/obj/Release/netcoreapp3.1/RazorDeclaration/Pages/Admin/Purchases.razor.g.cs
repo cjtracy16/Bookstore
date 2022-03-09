@@ -54,13 +54,38 @@ using Bookstore.Models;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/admin/purchases")]
-    public partial class Purchases : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Purchases : OwningComponentBase<IPurchaseRepository>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 6 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\Purchases.razor"
+       
+
+    public IPurchaseRepository repo => Service;
+
+    public IEnumerable<Purchase> AllPurchases { get; set; }
+    public IEnumerable<Purchase> UncollectedPurchases { get; set; }
+    public IEnumerable<Purchase> CollectedPurchases { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        await UpdateData();
+    }
+
+    public async Task UpdateData()
+    {
+        AllPurchases = await repo.Purchases.ToListAsync();
+        UncollectedPurchases = AllPurchases.Where(x => !x.Shipped);
+        CollectedPurchases = AllPurchases.Where(x => x.Shipped);
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

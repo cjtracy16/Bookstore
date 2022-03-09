@@ -53,8 +53,7 @@ using Bookstore.Models;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/purchases")]
-    public partial class Purchases : OwningComponentBase<IPurchaseRepository>
+    public partial class PurchaseTable : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -62,37 +61,20 @@ using Bookstore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\Purchases.razor"
+#line 40 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\PurchaseTable.razor"
        
 
-    public IPurchaseRepository repo => Service;
+    [Parameter]
+    public string TableTitle { get; set; } = "Purchases";
 
-    public IEnumerable<Purchase> AllPurchases { get; set; }
-    public IEnumerable<Purchase> NotShippedPurchases { get; set; }
-    public IEnumerable<Purchase> ShippedPurchases { get; set; }
+    [Parameter]
+    public IEnumerable<Purchase> Purchases { get; set; }
 
-    protected async override Task OnInitializedAsync()
-    {
-        await UpdateData();
-    }
+    [Parameter]
+    public string ButtonLabel { get; set; } = "Purchased";
 
-    public async Task UpdateData()
-    {
-        AllPurchases = await repo.Purchases.ToListAsync();
-        NotShippedPurchases = AllPurchases.Where(x => !x.Shipped);
-        ShippedPurchases = AllPurchases.Where(x => x.Shipped);
-    }
-
-
-    public void ShipPurchase(int id) => UpdatePurchase(id, true);
-    public void ResetPurchase(int id) => UpdatePurchase(id, false);
-
-    private void UpdatePurchase(int id, bool shipped)
-    {
-        Purchase p = repo.Purchases.FirstOrDefault(x => x.PurchaseId == id);
-        p.Shipped = shipped;
-        repo.SavePurchase(p);
-    }
+    [Parameter]
+    public EventCallback<int> PurchaseSelected { get; set; }
 
 #line default
 #line hidden

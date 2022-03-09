@@ -98,3 +98,5 @@ C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netco
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Routed.razor.g.cs
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\_Imports.razor.g.cs
 C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Index.cshtml.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\PurchaseTable.razor.g.cs
+C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\PurchaseTable.razor.g.cs
