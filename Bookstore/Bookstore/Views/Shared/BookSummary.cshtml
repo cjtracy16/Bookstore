@@ -5,33 +5,37 @@
 <div class="card card-outline-primary m-2 p-1">
 
     @* List out the information for each book *@
-    <div class="bg-light p-1">
+    <div class="color-byu p-1">
         <div class="row">
-            <h4 class="col bookTitle">@Model.Title</h4>
-            <div class=" col-6 text-right p-2 m-3 price" style="float:right">
+            <h4 class="col p-2 pl-4 m-3 bookTitle">@Model.Title</h4>
+            <div class=" col-6 text-right p-2 pr-4 m-3 price" style="float:right">
                 Price: $@Model.Price
             </div>
         </div>
 
-        
+
     </div>
+    <div class="row">
+        <div class="col">
+            <ul class="bookInfoList mt-2 text-byu">
+                <li class="list-unstyled mb-1 bookInfoText"><b>Author: </b> @Model.Author</li>
+                <li class="list-unstyled mb-1 bookInfoText"><b>Publisher: </b> @Model.Publisher</li>
+                <li class="list-unstyled mb-1 bookInfoText"><b>ISBN: </b> @Model.Isbn</li>
+                <li class="list-unstyled mb-1 bookInfoText"><b>Classification: </b> @Model.Classification</li>
+                <li class="list-unstyled mb-1 bookInfoText"><b>Category: </b> @Model.Category</li>
+                <li class="list-unstyled mb-1 bookInfoText"><b>Number of Pages: </b> @Model.PageCount</li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <form method="post" asp-page="/Purchase">
 
-    <ul class="bookInfoList pt-2">
-        <li class="list-unstyled"><b>Author:</b> @Model.Author</li>
-        <li class="list-unstyled"><b>Publisher:</b> @Model.Publisher</li>
-        <li class="list-unstyled"><b>ISBN:</b> @Model.Isbn</li>
-        <li class="list-unstyled"><b>Classification:</b> @Model.Classification</li>
-        <li class="list-unstyled"><b>Category:</b> @Model.Category</li>
-        <li class="list-unstyled"><b>Number of Pages:</b> @Model.PageCount</li>
-    </ul>
-    <form method="post" asp-page="/Purchase">
-
-        @* Two hidden fields ID so that the specific book info can be added to the cart and the returnURL so once a user returns to the main site they will return to the specific page they are on. *@
-        <input type="hidden" asp-for="@Model.BookId" />
-        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
-        <span class="card-text">
-            <button type="submit" class="m-3 btn btn-success btn-sm float-end" style="float:right">Purchase</button>
-        </span>
-
-    </form>
-</div>
+                @* Two hidden fields ID so that the specific book info can be added to the cart and the returnURL so once a user returns to the main site they will return to the specific page they are on. *@
+                <input type="hidden" asp-for="@Model.BookId" />
+                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                <span class="card-text">
+                    <button type="submit" class="m-3 btn btn-primary btn-md float-end align-bottom" style="float:right">Purchase</button>
+                </span>
+            </form>
+        </div>
+        </div>
+    </div>

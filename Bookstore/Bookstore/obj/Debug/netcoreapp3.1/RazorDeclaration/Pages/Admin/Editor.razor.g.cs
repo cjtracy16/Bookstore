@@ -53,7 +53,9 @@ using Bookstore.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class PurchaseTable : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/books/edit/{id:long}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/books/create")]
+    public partial class Editor : OwningComponentBase<IBookstoreRepository>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -61,20 +63,43 @@ using Bookstore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\PurchaseTable.razor"
+#line 71 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\Editor.razor"
        
 
     [Parameter]
-    public string TableTitle { get; set; } = "Purchases";
+    public long Id { get; set; } = 0;
 
-    [Parameter]
-    public IEnumerable<Purchase> Purchases { get; set; }
+    public string ThemeColor => Id == 0 ? "byu" : "primary";
+    public string TitleText => Id == 0 ? "Add" : "Edit";
 
-    [Parameter]
-    public string ButtonLabel { get; set; } = "Purchased";
+    public Book b { get; set; } = new Book();
 
-    [Parameter]
-    public EventCallback<int> PurchaseSelected { get; set; }
+    public IBookstoreRepository repo => Service;
+
+    protected override void OnParametersSet()
+    {
+        if (Id != 0) //Existing Project
+        {
+            b = repo.Books.FirstOrDefault(x => x.BookId == Id);
+        }
+    }
+
+    public void SaveBook()
+    {
+        if (Id == 0) //New Project
+        {
+            repo.CreateBook(b);
+        }
+        else
+        {
+            repo.SaveBook(b);
+        }
+
+        NavManager.NavigateTo("/admin/books");
+    }
+
+    [Inject]
+    public NavigationManager NavManager { get; set; }
 
 #line default
 #line hidden

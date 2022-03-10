@@ -3,17 +3,20 @@
 @{
 }
 
-<h2>Your Cart</h2>
+<div class="mb-3 mt-3 font-weight-bolder text-byu">
+    <h3>Your Cart</h3>
+</div>
 
 @* Create a table with the cart information *@
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped mt-3">
 
-    <thead>
+    <thead class="color-byu">
         <tr>
             <th>Book</th>
             <th>Quantity</th>
             <th>Cost</th>
             <th>Subtotal</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -48,6 +51,6 @@
 
 @* Continue shopping button - using a ReturnUrl Passed during GET() *@
 <div>
-    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
-    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Purchase">Checkout</a>
+    <a class="btn btn-byu" href="@Model.ReturnUrl">Continue Shopping</a>
+    <a class="btn btn-byu" asp-action="Checkout" asp-controller="Purchase">Checkout</a>
 </div>

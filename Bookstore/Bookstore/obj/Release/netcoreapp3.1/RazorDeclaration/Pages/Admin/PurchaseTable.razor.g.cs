@@ -61,7 +61,7 @@ using Bookstore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 40 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\PurchaseTable.razor"
+#line 50 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\PurchaseTable.razor"
        
 
     [Parameter]

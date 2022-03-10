@@ -53,7 +53,8 @@ using Bookstore.Models;
 #line default
 #line hidden
 #nullable disable
-    public partial class PurchaseTable : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/books/details/{id:long}")]
+    public partial class Details : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -61,20 +62,23 @@ using Bookstore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 50 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\PurchaseTable.razor"
+#line 22 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\Details.razor"
        
 
-    [Parameter]
-    public string TableTitle { get; set; } = "Purchases";
+    [Inject]
+    public IBookstoreRepository repo { get; set; }
 
     [Parameter]
-    public IEnumerable<Purchase> Purchases { get; set; }
+    public long Id { get; set; }
 
-    [Parameter]
-    public string ButtonLabel { get; set; } = "Purchased";
+    public Book book { get; set; }
 
-    [Parameter]
-    public EventCallback<int> PurchaseSelected { get; set; }
+    protected override void OnParametersSet()
+    {
+        book = repo.Books.FirstOrDefault(x => x.BookId == Id);
+    }
+
+    public string EditUrl => $"/admin/books/edit/{book.BookId}";
 
 #line default
 #line hidden

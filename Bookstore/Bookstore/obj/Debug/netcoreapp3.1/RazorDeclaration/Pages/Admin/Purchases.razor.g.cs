@@ -62,9 +62,10 @@ using Bookstore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\Purchases.razor"
+#line 13 "C:\Users\Conner Tracy\source\repos\Bookstore\Bookstore\Bookstore\Pages\Admin\Purchases.razor"
        
 
+    //Sets up attributes and methods to be used when creating the purchases tables
     public IPurchaseRepository repo => Service;
 
     public IEnumerable<Purchase> AllPurchases { get; set; }
@@ -83,7 +84,7 @@ using Bookstore.Models;
         ShippedPurchases = AllPurchases.Where(x => x.Shipped);
     }
 
-
+    //Allows us to pass in a specific book and toggle the Purchase Shipped Atrribute by a click of a button
     public void ShipPurchase(int id) => UpdatePurchase(id, true);
     public void ResetPurchase(int id) => UpdatePurchase(id, false);
 

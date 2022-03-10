@@ -1,15 +1,18 @@
 ﻿@page "/admin/purchases"
 @inherits OwningComponentBase<IPurchaseRepository>
 
-<PurchaseTable TableTitle="Uncollected Donations" Purchases="NotShippedPurchases"
+@* Creates 2 seperate tables and passes in parameters *@
+<PurchaseTable TableTitle="Not Shipped Purchases" Purchases="NotShippedPurchases"
                ButtonLabel="Shipped" PurchaseSelected="ShipPurchase"></PurchaseTable>
-<PurchaseTable TableTitle="Uncollected Donations" Purchases="ShippedPurchases"
+<PurchaseTable TableTitle="Shipped Purchases" Purchases="ShippedPurchases"
                ButtonLabel="Reset" PurchaseSelected="ResetPurchase"></PurchaseTable>
 
-<button class="btn btn-info" @onclick="@(x => UpdateData())">Refresh Data</button>
+@* Refresh button to update data *@
+<button class="btn btn-byu" @onclick="@(x => UpdateData())">Refresh Data</button>
 
 @code {
 
+    //Sets up attributes and methods to be used when creating the purchases tables
     public IPurchaseRepository repo => Service;
 
     public IEnumerable<Purchase> AllPurchases { get; set; }
@@ -28,7 +31,7 @@
         ShippedPurchases = AllPurchases.Where(x => x.Shipped);
     }
 
-
+    //Allows us to pass in a specific book and toggle the Purchase Shipped Atrribute by a click of a button
     public void ShipPurchase(int id) => UpdatePurchase(id, true);
     public void ResetPurchase(int id) => UpdatePurchase(id, false);
 
