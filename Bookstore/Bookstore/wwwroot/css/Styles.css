@@ -80,10 +80,18 @@
 
 .btn-category{
     min-width: 145px;
-    max-width: 200px;
 }
 
 .price{
     font-size:medium;
     font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    width: inherit;
+    color: black;
+    text-align: center;
 }

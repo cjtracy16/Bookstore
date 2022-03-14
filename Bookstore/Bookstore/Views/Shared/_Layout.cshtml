@@ -21,20 +21,28 @@
         </div>
     </div>
 
-        <div class="row m-1 p-1">
-            <div id="types" class="col-2">
-                <vc:categories></vc:categories>
-            </div>
+    <div class="row m-1 p-1">
+        <div id="types" class="col-2">
+            <vc:categories></vc:categories>
+        </div>
 
-            <div class="col-8">
-                <div>
-                    @RenderBody()
-                </div>
-            </div>
+        <div class="col-1">
 
-            <div id="types" class="col-2">
+        </div>
 
+        <div class="col-7">
+            <div>
+                @RenderBody()
             </div>
         </div>
+
+        <div id="types" class="col-2">
+            <div class="footer text-right text-black">
+                <img src="~/img/BookmarkIt.jpg" height="150" />
+            </div>
+        </div>
+    </div>
+
+    
 </body>
 </html>
