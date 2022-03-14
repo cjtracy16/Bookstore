@@ -43,6 +43,18 @@
     color: white;
 }
 
+.btn-byu-outline {
+    background-color: white;
+    color: rgb(0, 45, 95);
+    border-radius: 3px;
+}
+
+    .btn-byu-outline:hover {
+        background-color: rgb(13, 110, 253);
+        color: white;
+        border-radius: 3px;
+    }
+
 .btn-byu:hover {
     background-color: rgb(13, 110, 253);
     color: white;
