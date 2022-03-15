@@ -89,7 +89,7 @@
 
 .footer {
     position: fixed;
-    right: 20px;
+    left: 20px;
     bottom: 30px;
     width: inherit;
     color: black;

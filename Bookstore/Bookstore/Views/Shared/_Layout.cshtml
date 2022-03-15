@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/css/Styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div class="color-byu font-weight-bolder text-white p-2">
@@ -24,6 +27,10 @@
     <div class="row m-1 p-1">
         <div id="types" class="col-2">
             <vc:categories></vc:categories>
+
+            <div class="footer text-left text-black">
+                <img src="~/img/BookmarkIt.jpg" height="150" />
+            </div>
         </div>
 
         <div class="col-1">
@@ -36,9 +43,25 @@
             </div>
         </div>
 
-        <div id="types" class="col-2">
-            <div class="footer text-right text-black">
-                <img src="~/img/BookmarkIt.jpg" height="150" />
+        <div id="types" class="col-2 text-byu">
+            <div class="container p-3">
+                <h2 class="text-byu">About Us</h2>
+                <p>Click on the buttons to learn more:</p>
+
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#story">Our Story</button>
+                <div id="story" class="collapse p-2 text-byu">
+                    <p>We started out a group of Information Systems students studying at BYU, and decided to use our skills to share our love for books with the world. We started out with a few of our most beloved books and now we sell all types of book in various categories and generes.</p>
+                </div>
+
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#contact">Contact Us</button>
+                <div id="contact" class="collapse p-2 text-byu">
+                    <p class="font-weight-bold">Phone Number:</p>
+                    <p>801-555-1234</p>
+                    <p class="font-weight-bold">Email:</p>
+                    <p>customerservice&#64;bookmarkit.com</p>
+                    <p class="font-weight-bold">Address:</p>
+                    <p>W308 TNRB, Provo UT, 84601</p>
+                </div>
             </div>
         </div>
     </div>
